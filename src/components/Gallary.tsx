@@ -1,5 +1,7 @@
 import Image from "next/image"
 import dynamic from "next/dynamic";
+import getConfig from 'next/config'; 
+const { publicRuntimeConfig } = getConfig();
 
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -56,7 +58,7 @@ export default function Gallary() {
                             images.map((image, key) => (
                                 <div className="item" key={key}>
                                     <Image
-                                        src={image}
+                                        src={`${publicRuntimeConfig.staticFolder || ''}${image}`}
                                         width={100}
                                         height={200}
                                         alt={image}
