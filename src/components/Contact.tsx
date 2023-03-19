@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import getConfig from 'next/config'; 
+const { publicRuntimeConfig } = getConfig();
 
 export default function Contact() {
     return (
@@ -29,7 +31,7 @@ export default function Contact() {
                 <div className="col-md-6 col-sm-12">
                     <div className="contact-image">
                         <Image
-                            src={`${process.env.BASE_PATH}/images/contact-image.jpg`}
+                            src={`${publicRuntimeConfig.staticFolder || ''}/images/contact-image.jpg`}
                             className="img-responsive"
                             layout='fill'
                             objectFit='contain'

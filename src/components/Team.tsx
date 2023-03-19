@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link';
-
+import getConfig from 'next/config'; 
+const { publicRuntimeConfig } = getConfig();
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookSquare, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
@@ -35,7 +36,7 @@ export default function Team() {
                     <div className="col-md-4 col-sm-6" key={teacher.id}>
                         <div className="team-thumb">
                             <div className="team-image">
-                                <Image src={`${process.env.BASE_PATH}${teacher.image}`} className="img-responsive" width={50} height={150} alt="" />
+                                <Image src={`${publicRuntimeConfig.staticFolder || ''}${teacher.image}`} className="img-responsive" width={50} height={150} alt={teacher.name} />
                             </div>
                             <div className="team-info">
                                 <h3>{teacher.name}</h3>
