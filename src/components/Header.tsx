@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from 'next/image'
+import getConfig from 'next/config'; 
+const { publicRuntimeConfig } = getConfig();
 
 import * as _ from 'lodash';
 
@@ -58,7 +60,7 @@ export default function Header({ inView, onHeaderClick }: HomeProps) {
 
                     {/* <!-- lOGO TEXT HERE --> */}
                     <Link href="/" className="navbar-brand">
-                        <Image src={`${process.env.BASE_PATH}/images/logo.png`} alt="" width={50} height={50} className="logo" />
+                        <Image src={`${publicRuntimeConfig.staticFolder || ''}/images/logo.png`} alt="" width={50} height={50} className="logo" />
                     </Link>
                 </div>
 
