@@ -28,8 +28,12 @@ export default function Contact() {
 
                 <div className="col-md-6 col-sm-12">
                     <div className="contact-image">
-                        <Image src="/images/contact-image.jpg" className="img-responsive" layout='fill'
-    objectFit='contain' alt="Smiling Two Girls" />
+                        <Image
+                            src={`${process.env.BASE_PATH}/images/contact-image.jpg`}
+                            className="img-responsive"
+                            layout='fill'
+                            objectFit='contain'
+                            alt="Smiling Two Girls" />
                     </div>
                 </div>
 

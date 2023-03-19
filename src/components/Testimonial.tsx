@@ -104,7 +104,7 @@ export default function Testimonial() {
                                 <div className="col-md-4 col-sm-4" key={review.name}>
                                     <div className="item">
                                         <div className="tst-image">
-                                            <Image src={"/images/" + review?.name?.toLocaleUpperCase() + ".jpeg"} className="img-responsive" width={100} height={100} alt="" />
+                                            <Image src={`${process.env.BASE_PATH}/images/${review?.name?.toLocaleUpperCase()}.jpeg`} className="img-responsive" width={100} height={100} alt="" />
                                         </div>
                                         <div className="tst-author">
                                             <h4>{review.name}</h4>

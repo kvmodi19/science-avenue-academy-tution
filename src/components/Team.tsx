@@ -35,7 +35,7 @@ export default function Team() {
                     <div className="col-md-4 col-sm-6" key={teacher.id}>
                         <div className="team-thumb">
                             <div className="team-image">
-                                <Image src={teacher.image} className="img-responsive" width={50} height={150} alt="" />
+                                <Image src={`${process.env.BASE_PATH}${teacher.image}`} className="img-responsive" width={50} height={150} alt="" />
                             </div>
                             <div className="team-info">
                                 <h3>{teacher.name}</h3>
