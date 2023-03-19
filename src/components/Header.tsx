@@ -87,6 +87,11 @@ export default function Header({ inView, onHeaderClick }: HomeProps) {
                                 Courses
                             </Link>
                         </li> */}
+                        <li className={getActiveClass('gallary')}>
+                            <Link href="#gallary" scroll={false} onClick={() => changeSelectedTab('gallary')}>
+                                Gallary
+                            </Link>
+                        </li>
                         <li className={getActiveClass('testimonial')}>
                             <Link href="#testimonial" scroll={false} onClick={() => changeSelectedTab('testimonial')}>
                                 Reviews

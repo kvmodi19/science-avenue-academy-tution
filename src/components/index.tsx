@@ -7,6 +7,7 @@ import Courses from "./Courses";
 import About from "./About";
 import Feature from "./Feature";
 import Testimonial from "./Testimonial";
+import Gallary from "./Gallary";
 
 export {
     Contact,

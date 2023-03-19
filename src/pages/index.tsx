@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { About, Contact, Courses, Feature, Footer, Header, Slider, Team, Testimonial } from '@/components'
 import { InView } from 'react-intersection-observer';
+import Gallary from '@/components/Gallary';
 
 export default function Home() {
   const [showPreloader, updatePreloader] = useState(true);
@@ -13,10 +14,10 @@ export default function Home() {
   })
 
   const checkInView = (tab: string, entry: IntersectionObserverEntry) => {
-    console.log(tab, entry.intersectionRect.top)
-    if (entry.intersectionRect.top < 150) {
-      setInView(tab);
-    }
+    // console.log(tab, entry.intersectionRect.top)
+    // if (entry.intersectionRect.top < 150) {
+    // }
+    setInView(tab);
   }
 
   return (
@@ -67,6 +68,9 @@ export default function Home() {
         <Courses />
       </InView> */}
 
+      <InView as="section" id="gallary" onChange={(inView, entry) => inView && checkInView('gallary', entry)}>
+        <Gallary />
+      </InView>
 
       {/* <!-- TESTIMONIAL --> */}
       <InView as="section" id="testimonial" onChange={(inView, entry) => inView && checkInView('testimonial', entry)}>

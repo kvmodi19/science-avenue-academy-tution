@@ -544,6 +544,7 @@ section {
 	vertical-align: middle;
 	margin-bottom: 20px;
 	text-align: left;
+	width: min-content;
 	h4 {
 		margin: 0;
 	}
@@ -709,6 +710,17 @@ footer {
 		}
 	}
 }
+
+#gallary {
+	.section-title {
+		text-align: center;
+	}
+	.gallary-image {
+		object-fit: contain;
+		width: 100%;
+	}
+}
+
 @media (min-width: 768px) {
 	.home-slider {
 		.col-md-6 {

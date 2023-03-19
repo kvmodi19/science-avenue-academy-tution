@@ -1,3 +1,5 @@
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
@@ -22,9 +24,61 @@ export default function Testimonial() {
     }
     const reviews = [
         {
-            name: ''
+            "name": "SHIKHA PARIHAR",
+            "description": "nice coaching",
+            "class": 9
+        },
+        {
+            "name": "KHUSHBOO SINGH",
+            "description": "nice coaching",
+            "class": 9
+        },
+        {
+            "name": "NIYA PATEL",
+            "description": "nice coaching",
+            "class": 9
+        },
+        {
+            "name": "ANANY SRIVASTAVA",
+            "description": "nice coaching",
+            "class": 10
+        },
+        {
+            "name": "VISHWA THAKOR",
+            "description": "Very Good atmosphere... awesome teachers n teaching...",
+            "class": 10
+        },
+        {
+            "name": "SAKSHI NAYAK",
+            "description": "nice coaching",
+            "class": 12
+        },
+        {
+            "name": "VIDHI PATEL",
+            "description": "nice coaching",
+            "class": 12
+        },
+        {
+            "name": "DIYA PARMAR",
+            "description": "nice coaching",
+            "class": 12
+        },
+        {
+            "name": "TRUPTI  SOTKAR",
+            "description": "nice coaching",
+            "class": 12
+        },
+        {
+            "name": "AYUSH PATEL",
+            "description": "nice coaching",
+            "class": 9
+        },
+        {
+            "name": "ARADHYA SHRIVASTAVA",
+            "description": "nice coaching",
+            "class": 9
         }
-    ]
+    ];
     return (
 
 
@@ -45,25 +99,46 @@ export default function Testimonial() {
                         smartSpeed={1000}
                         responsiveClass={true}
                     >
-                        <div className="col-md-4 col-sm-4">
-                            <div className="item">
-                                <div className="tst-image">
-                                    <Image src="/images/tst-image1.jpg" className="img-responsive" width={100} height={100} alt="" />
+                        {
+                            reviews.map((review) => (
+                                <div className="col-md-4 col-sm-4" key={review.name}>
+                                    <div className="item">
+                                        <div className="tst-image">
+                                            <Image src={"/images/" + review?.name?.toLocaleUpperCase() + ".jpeg"} className="img-responsive" width={100} height={100} alt="" />
+                                        </div>
+                                        <div className="tst-author">
+                                            <h4>{review.name}</h4>
+                                            <span>{review.class}</span>
+                                        </div>
+                                        <p>{review.description}</p>
+                                        {/* <div className="tst-rating">
+                                            <i className="fa fa-star">
+                                                <FontAwesomeIcon icon={faStar} height={10} />
+                                            </i>
+                                            <i className="fa fa-star">
+                                                <FontAwesomeIcon icon={faStar} height={10} />
+
+                                            </i>
+
+                                            <FontAwesomeIcon icon={faStar} height={10} />
+                                            <i className="fa fa-star">
+                                                <FontAwesomeIcon icon={faStar} height={10} />
+
+                                            </i>
+                                            <i className="fa fa-star">
+                                                <FontAwesomeIcon icon={faStar} height={10} />
+
+                                            </i>
+                                            <i className="fa fa-star">
+                                                <FontAwesomeIcon icon={faStar} height={10} />
+
+                                            </i>
+                                        </div> */}
+                                    </div>
                                 </div>
-                                <div className="tst-author">
-                                    <h4>Jackson</h4>
-                                    <span>Shopify Developer</span>
-                                </div>
-                                <p>You really do help young creative minds to get quality education and professional job search assistance. I’d recommend it to everyone!</p>
-                                <div className="tst-rating">
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                    <i className="fa fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
+                            ))
+
+                        }
 
                     </OwlCarousel>
 

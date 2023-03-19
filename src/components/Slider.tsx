@@ -1,6 +1,5 @@
 import React from "react"
 import dynamic from "next/dynamic";
-import Link from "next/link";
 
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -14,24 +13,6 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), { ssr: false });
 
 export default function Slider() {
 
-    const programs = [
-        {
-            name: 'Creative Development & Program',
-            description: `need to change`
-        },
-        {
-            name: 'Limited Students Per Batch',
-            description: `need to change`
-        },
-        {
-            name: 'Quality Education by Experience Faculties',
-            description: `need to change`
-        },
-        {
-            name: 'Regular Test & Revision',
-            description: `need to change`
-        },
-    ]
     return (
         <div className="row">
             <OwlCarousel
