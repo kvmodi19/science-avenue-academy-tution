@@ -13,19 +13,19 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), { ssr: false });
 
 export default function Gallary() {
     const images = [
-        '../../public/images/gallary/DSC00166_1.JPG',
-        '../../public/images/gallary/DSC00166.JPG',
-        '../../public/images/gallary/DSC00169_1.JPG',
-        '../../public/images/gallary/DSC00169.JPG',
-        '../../public/images/gallary/DSC00172.JPG',
-        '../../public/images/gallary/DSC00175.JPG',
-        '../../public/images/gallary/DSC00176.JPG',
-        '../../public/images/gallary/DSC00183.JPG',
-        '../../public/images/gallary/DSC00184.JPG',
-        '../../public/images/gallary/DSC00187.JPG',
-        '../../public/images/gallary/DSC00196.JPG',
-        '../../public/images/gallary/DSC00198.JPG',
-        '../../public/images/gallary/DSC00203.JPG',
+        '/images/gallary/DSC00166_1.JPG',
+        '/images/gallary/DSC00166.JPG',
+        '/images/gallary/DSC00169_1.JPG',
+        '/images/gallary/DSC00169.JPG',
+        '/images/gallary/DSC00172.JPG',
+        '/images/gallary/DSC00175.JPG',
+        '/images/gallary/DSC00176.JPG',
+        '/images/gallary/DSC00183.JPG',
+        '/images/gallary/DSC00184.JPG',
+        '/images/gallary/DSC00187.JPG',
+        '/images/gallary/DSC00196.JPG',
+        '/images/gallary/DSC00198.JPG',
+        '/images/gallary/DSC00203.JPG',
     ];
     const responsive = {
         0: {

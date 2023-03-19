@@ -4,7 +4,7 @@ const webpack = require("webpack");
 const nextConfig = {
   reactStrictMode: true,
   distDir: 'build',
-  // output: 'export',
+  basePath: '/science-avenue-academy-tution',
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     config.plugins.push(
       new webpack.ProvidePlugin({
