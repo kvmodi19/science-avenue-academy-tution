@@ -20,11 +20,9 @@ export default function Header({ inView, onHeaderClick }: HomeProps) {
 
     useEffect(() => {
         setSelectedTab(inView);
-        console.log('inView', inView)
     }, [inView])
 
     const getActiveClass = (tab: string) => {
-        // console.log('getActiveClass', tab)
         return tab === selectedTab ? 'active' : '';
     }
 

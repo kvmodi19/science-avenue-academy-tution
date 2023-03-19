@@ -14,9 +14,6 @@ export default function Home() {
   })
 
   const checkInView = (tab: string, entry: IntersectionObserverEntry) => {
-    // console.log(tab, entry.intersectionRect.top)
-    // if (entry.intersectionRect.top < 150) {
-    // }
     setInView(tab);
   }
 
