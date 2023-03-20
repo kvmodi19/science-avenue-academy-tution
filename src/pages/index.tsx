@@ -1,9 +1,10 @@
 import Head from 'next/head'
 
 import { useEffect, useState } from 'react'
-import { About, Contact, Courses, Feature, Footer, Header, Slider, Team, Testimonial } from '@/components'
+import { About, Contact, Courses, Feature, Footer, Gallary, Header, Slider, Team, Testimonial } from '@/components'
 import { InView } from 'react-intersection-observer';
-import Gallary from '@/components/Gallary';
+import getConfig from 'next/config'; 
+const { publicRuntimeConfig } = getConfig();
 
 export default function Home() {
   const [showPreloader, updatePreloader] = useState(true);
@@ -21,9 +22,13 @@ export default function Home() {
     <>
       <Head>
         <title>Science Avenue Academy</title>
+        <meta property="og:title" content="Science Avenue Academy" />
+        <meta property="og:description" content="Science avenue | Tution classes For 8th -10th , 11th - 12th Science all Main subjects" />
+        <meta property="og:url" content="https://kvmodi19.github.io/science-avenue-academy-tution/" />
+        <meta property="og:type" content="website" />
         <meta name="description" content="Science Avenue Academy | Tution class 8th ,9th ,10th , 11th- 12th Science all Main subjects Open today until 7:00 PM" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={`${publicRuntimeConfig.staticFolder || ''}/favicon.ico`} />
       </Head>
       {/* <!-- PRE LOADER --> */}
       {showPreloader &&

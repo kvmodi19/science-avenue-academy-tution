@@ -19,4 +19,5 @@ export {
     About,
     Feature,
     Testimonial,
+    Gallary,
 }
