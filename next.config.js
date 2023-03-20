@@ -4,7 +4,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
   reactStrictMode: true,
-  // basePath:'/science-avenue-academy-tution',
+  basePath: '/science-avenue-academy-tution' ,
   publicRuntimeConfig: {
     // Will be available on both server and client
     // staticFolder: isProd ? '/science-avenue-academy-tution' : '',
