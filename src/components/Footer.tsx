@@ -20,7 +20,7 @@ export default function Footer() {
 
                             <ul className="social-icon">
                                 <li>
-                                    <Link href="#">
+                                    <Link href="https://www.facebook.com/scienceavenueacademy/">
                                         <FontAwesomeIcon icon={faFacebookSquare} height={20} />
                                     </Link>
                                 </li>
@@ -65,7 +65,7 @@ export default function Footer() {
 
                     <div className="col-md-4 col-sm-12">
                         <div className="footer-info newsletter-form">
-                            <div className="section-title">
+                            {/* <div className="section-title">
                                 <h2>Newsletter Signup</h2>
                             </div>
                             <div>
@@ -76,7 +76,7 @@ export default function Footer() {
                                     </form>
                                     <span><sup>*</sup> Please note - we do not spam your email.</span>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
 

@@ -9,7 +9,7 @@ module.exports = (phase) => {
 
   const env = {
     reactStrictMode: true,
-    basePath: '/science-avenue-academy-tution',
+    basePath: isProd ? '/science-avenue-academy-tution' : '',
     publicRuntimeConfig: {
       // Will be available on both server and client
       staticFolder: isProd ? '/science-avenue-academy-tution' : '',

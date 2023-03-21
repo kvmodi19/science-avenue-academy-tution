@@ -106,7 +106,7 @@ export default function Header({ inView, onHeaderClick }: HomeProps) {
 
                     <ul className="nav navbar-nav navbar-right">
                         <li>
-                            <Link href="#">
+                            <Link href="tel:+918905970710">
                                 <span className="fa">
                                     <FontAwesomeIcon icon={faPhone} height={15} />
                                 </span>
