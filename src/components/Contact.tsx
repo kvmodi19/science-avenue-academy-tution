@@ -5,7 +5,7 @@ const { publicRuntimeConfig } = getConfig();
 export default function Contact() {
     const sendMessage = (event: any) => {
         event.preventDefault();
-        window.open(`https://wa.me/8905970710?text=Hi,%0aMy name is ${event.target.name.value}%0a%0a${event.target.message.value}`, '_blank');
+        window.open(`https://wa.me/918905970710?text=Hi,%0aMy name is ${event.target.name.value}%0a%0a${event.target.message.value}`, '_blank');
     }
     return (
         <div className="container">

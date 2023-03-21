@@ -1,7 +1,10 @@
 import Link from "next/link";
+import getConfig from "next/config";
+const { publicRuntimeConfig } = getConfig();
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookSquare, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import Image from "next/image";
 
 export default function Footer() {
     return (
@@ -24,11 +27,11 @@ export default function Footer() {
                                         <FontAwesomeIcon icon={faFacebookSquare} height={20} />
                                     </Link>
                                 </li>
-                                <li>
+                                {/* <li>
                                     <Link href="#">
                                         <FontAwesomeIcon icon={faTwitter} height={20} />
                                     </Link>
-                                </li>
+                                </li> */}
                                 <li>
                                     <Link href="https://www.instagram.com/scienceavenueacademy/" target={'_blank'}>
                                         <FontAwesomeIcon icon={faInstagram} height={20} />
@@ -48,7 +51,10 @@ export default function Footer() {
                             </div>
                             <address>
                                 <p>+91 89059 70710</p>
-                                <p><Link href="mailto:youremail.co">gopi_jariwala@yahoo.in</Link></p>
+                                <p><Link href="mailto:gopi_jariwala@yahoo.in">gopi_jariwala@yahoo.in</Link></p>
+                                <p>
+                                    <Image src={`${publicRuntimeConfig.staticFolder || ''}/images/contact-qr.jpeg`} height={150} width={150} alt="contact-QR"/>
+                                </p>
                             </address>
 
                             <div className="footer_menu">
