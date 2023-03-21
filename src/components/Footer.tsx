@@ -53,7 +53,7 @@ export default function Footer() {
                                 <p>+91 89059 70710</p>
                                 <p><Link href="mailto:gopi_jariwala@yahoo.in">gopi_jariwala@yahoo.in</Link></p>
                                 <p>
-                                    <Image src={`${publicRuntimeConfig.staticFolder || ''}/images/contact-qr.jpeg`} height={150} width={150} alt="contact-QR"/>
+                                    <Image src={`${publicRuntimeConfig.staticFolder || ''}/images/contact-qr.jpeg`} height={150} width={150} alt="contact-QR" />
                                 </p>
                             </address>
 
