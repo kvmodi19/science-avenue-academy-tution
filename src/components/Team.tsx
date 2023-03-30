@@ -12,13 +12,13 @@ export default function Team() {
             id: 1,
             name: 'Dr. Gopi Dalwadi (MD)',
             description: 'Founder',
-            image: '/images/gopi-dalwadi.jpg'
+            image: '/images/gopi-dalwadi.jpeg'
         },
         {
             id: 2,
             name: 'Dr. Nirav Dalwadi',
             description: 'Co-Founder',
-            image: '/images/nirav-dalwadi.jpg'
+            image: '/images/nirav-dalwadi.jpeg'
         },
     ]
 
