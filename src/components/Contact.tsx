@@ -35,7 +35,7 @@ export default function Contact() {
                 {/* <div className="col-md-6 col-sm-12">
                     <div className="contact-image">
                         <Image
-                            src={`${publicRuntimeConfig.staticFolder || ''}/images/contact-image.jpg`}
+                            src={`/images/contact-image.jpg`}
                             className="img-responsive"
                             layout='fill'
                             objectFit='contain'

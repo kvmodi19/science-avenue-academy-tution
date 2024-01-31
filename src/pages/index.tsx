@@ -28,7 +28,7 @@ export default function Home() {
         <meta property="og:type" content="website" />
         <meta name="description" content="Science Avenue Academy | Tution class 8th ,9th ,10th , 11th- 12th Science all Main subjects Open today until 7:00 PM" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href={`${publicRuntimeConfig.staticFolder || ''}/favicon.ico`} />
+        <link rel="icon" href={`/favicon.ico`} />
       </Head>
       {/* <!-- PRE LOADER --> */}
       {showPreloader &&

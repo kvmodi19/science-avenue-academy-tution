@@ -1,7 +1,13 @@
 import Image from "next/image"
 import dynamic from "next/dynamic";
-import getConfig from 'next/config'; 
+import getConfig from 'next/config';
+import { firebase_app, storage } from "../lib/firebase";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
+
 const { publicRuntimeConfig } = getConfig();
+
+const db = storage;
+
 
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -15,19 +21,38 @@ const OwlCarousel = dynamic(() => import('react-owl-carousel'), { ssr: false });
 
 export default function Gallary() {
     const images = [
-        '/images/gallary/DSC00166_1.JPG',
-        '/images/gallary/DSC00166.JPG',
-        '/images/gallary/DSC00169_1.JPG',
-        '/images/gallary/DSC00169.JPG',
-        '/images/gallary/DSC00172.JPG',
-        '/images/gallary/DSC00175.JPG',
-        '/images/gallary/DSC00176.JPG',
-        '/images/gallary/DSC00183.JPG',
-        '/images/gallary/DSC00184.JPG',
-        '/images/gallary/DSC00187.JPG',
-        '/images/gallary/DSC00196.JPG',
-        '/images/gallary/DSC00198.JPG',
-        '/images/gallary/DSC00203.JPG',
+        'images/gallary/admission_info_1.jpeg',
+        '/images/gallary/admission_info_2.jpeg',
+        '/images/gallary/admission_info_3.jpeg',
+        '/images/gallary/admission_info_4.jpeg',
+        '/images/gallary/admission_info_5.jpeg',
+        '/images/gallary/admission_info_6.jpeg',
+        '/images/gallary/admission_info_7.jpeg',
+        '/images/gallary/admission_info_8.jpeg',
+        '/images/gallary/admission_info_9.jpeg',
+        '/images/gallary/admission_info_10.jpeg',
+        '/images/gallary/admission_info_11.jpeg',
+        '/images/gallary/admission_info_12.jpeg',
+        '/images/gallary/admission_info_13.jpeg',
+        '/images/gallary/assignments.jpeg',
+        '/images/gallary/assignments-1.jpeg',
+        '/images/gallary/classes.jpeg',
+        '/images/gallary/classes-1.jpeg',
+        '/images/gallary/classes-2.jpeg',
+        '/images/gallary/classes-3.jpeg',
+        '/images/gallary/classes-4.jpeg',
+        '/images/gallary/classes-5.jpeg',
+        '/images/gallary/classes-6.jpeg',
+        '/images/gallary/classes-7.jpeg',
+        '/images/gallary/classes-8.jpeg',
+        '/images/gallary/show_pices.jpeg',
+        '/images/gallary/hording.jpeg ',
+        '/images/gallary/office.jpeg ',
+        '/images/gallary/outside_view.jpeg ',
+        '/images/gallary/outside_view_1.jpeg ',
+        '/images/gallary/outside_view_2.jpeg ',
+        '/images/gallary/outside_view_3.jpeg ',
+        '/images/gallary/pemplate.jpeg',
     ];
     const responsive = {
         0: {
@@ -58,7 +83,7 @@ export default function Gallary() {
                             images.map((image, key) => (
                                 <div className="item" key={key}>
                                     <Image
-                                        src={`${publicRuntimeConfig.staticFolder || ''}${image}`}
+                                        src={`${image}`}
                                         width={100}
                                         height={200}
                                         alt={image}
@@ -72,4 +97,19 @@ export default function Gallary() {
             </div>
         </div>
     )
+}
+
+async function getDoument(collection, id) {
+    let docRef = doc(db, collection, id);
+
+    let result = null;
+    let error = null;
+
+    try {
+        result = await getDoc(docRef);
+    } catch (e) {
+        error = e;
+    }
+
+    return { result, error };
 }

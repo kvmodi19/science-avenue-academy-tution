@@ -60,7 +60,7 @@ export default function Header({ inView, onHeaderClick }: HomeProps) {
 
                     {/* <!-- lOGO TEXT HERE --> */}
                     <Link href="/" className="navbar-brand">
-                        <Image src={`${publicRuntimeConfig.staticFolder || ''}/images/logo.png`} alt="" width={50} height={50} className="logo" />
+                        <Image src={`/images/logo.png`} alt="" width={50} height={50} className="logo" />
                     </Link>
                 </div>
 
